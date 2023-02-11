@@ -16,11 +16,7 @@ namespace GuiaDidactica02
             Inmueble inmueble = new Inmueble();
             Plazos plazos = new Plazos();
 
-            //datos empleado
-            empleado.nombre = "Cristina";
-            empleado.apellido = "Lopez";
-            empleado.telefono = 78899832;
-            empleado.idE = "E2301";
+            
 
             //menu principal
             Console.WriteLine("------------ Bienvenido ------------");
@@ -44,12 +40,28 @@ namespace GuiaDidactica02
             plazos.meses = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
 
+            //datos de empleado //
+
+            Console.WriteLine("Escriba los datos de empleado : ");
+            Console.WriteLine("Nombre: ");
+            empleado.nombreE = Console.ReadLine();
+            Console.WriteLine("Apellido: ");
+            empleado.apellidoE = Console.ReadLine();
+            Console.WriteLine("Telefono: ");
+            empleado.telefonoE = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ide");
+            empleado.idE = Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("*** PROCESANDO DATOS *** \n \n");
+            Console.Clear();
+
             //crear recibo
             inmueble.Recibo();
             cliente.MostrarC();
             plazos.plazo();
             empleado.DatosE();
             Console.WriteLine("--- GRACIAS POR SU COMPRA ---");
+            Console.WriteLine("--- VUELVA PRONTO ---");
             Console.ReadLine();
 
 
@@ -105,16 +117,41 @@ namespace GuiaDidactica02
 
     }
 
-    class Empleado : Persona
+    abstract class Emple
+    {
+        public string nombreE;
+        public string apellidoE;
+        public int telefonoE;
+
+        public string Nombre
+        {
+            get { return nombreE; }
+            set { nombreE = value; }
+        }
+
+        public string Apellido
+        {
+            get { return apellidoE; }
+            set { apellidoE = value; }
+        }
+
+        public int Telefono
+        {
+            get { return telefonoE; }
+            set { telefonoE = value; }
+        }
+
+
+    }
+
+    class Empleado : Emple
     {
         public string idE;
 
         public void DatosE()
         {
-            Console.WriteLine("*** DATOS EMPLEADO ***");
-            Console.WriteLine("Nombre: " + nombre);
-            Console.WriteLine("Apellido: " + apellido);
-            Console.WriteLine("Identificacion: " + idE);
+            Console.WriteLine("*** DATOS Empleado ***");
+            Console.WriteLine("Nombre: " + nombreE +  "\nApellido: " + apellidoE +  "\nTelefono: " + telefonoE + "\nidE: " + idE);
             Console.WriteLine("\n");
         }
     }

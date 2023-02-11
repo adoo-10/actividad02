@@ -6,3 +6,11 @@ C:\Users\adoX1\source\repos\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidact
 C:\Users\adoX1\source\repos\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidactica02.csproj.CoreCompileInputs.cache
 C:\Users\adoX1\source\repos\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidactica02.exe
 C:\Users\adoX1\source\repos\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidactica02.pdb
+C:\Users\PC\Documents\GitHub\actividad02\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidactica02.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\GitHub\actividad02\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidactica02.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Documents\GitHub\actividad02\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidactica02.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\GitHub\actividad02\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidactica02.exe
+C:\Users\PC\Documents\GitHub\actividad02\GuiaDidactica02\GuiaDidactica02\obj\Debug\GuiaDidactica02.pdb
+C:\Users\PC\Documents\GitHub\actividad02\GuiaDidactica02\GuiaDidactica02\bin\Debug\GuiaDidactica02.exe.config
+C:\Users\PC\Documents\GitHub\actividad02\GuiaDidactica02\GuiaDidactica02\bin\Debug\GuiaDidactica02.exe
+C:\Users\PC\Documents\GitHub\actividad02\GuiaDidactica02\GuiaDidactica02\bin\Debug\GuiaDidactica02.pdb
