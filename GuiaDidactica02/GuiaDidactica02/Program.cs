@@ -16,22 +16,30 @@ namespace GuiaDidactica02
             Inmueble inmueble = new Inmueble();
             Plazos plazos = new Plazos();
 
-            
-
             //menu principal
-            Console.WriteLine("------------ Bienvenido ------------");
-            Console.WriteLine("Porfavor seleccione una opcion de su agrado de acuerdo al inmueble que necesite: ");
-            Console.WriteLine("1. Casa \n" + "2. Carro \n " + "3.Parcela \n" + "4. Fabrica \n");
-            inmueble.opcion = Convert.ToInt32(Console.ReadLine());
+            int i = 5;
+            while ( i > 4 )
+            {
+                Console.WriteLine("------------ Bienvenido ------------");
+                Console.WriteLine("Porfavor seleccione una opcion de su agrado de acuerdo al inmueble que necesite: ");
+                Console.WriteLine("1. Casa \n" + "2. Carro \n " + "3.Parcela \n" + "4. Fabrica \n");
+                inmueble.opcion = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+                i = inmueble.opcion;
+                if ( i > 4)
+                {
+                    Console.WriteLine("Escoja una opcion valida porfavor.");
+                }
+            }
 
             //pedir datos personales del cliente
             Console.WriteLine("Escriba sus datos personales para completar el pedido: ");
             Console.WriteLine("Nombre: ");
-            cliente.nombre = Console.ReadLine();
+            cliente.Nombre = Console.ReadLine();
             Console.WriteLine("Apellido: ");
-            cliente.apellido = Console.ReadLine();
+            cliente.Apellido = Console.ReadLine();
             Console.WriteLine("Telefono: ");
-            cliente.telefono = Convert.ToInt32(Console.ReadLine());
+            cliente.Telefono = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Dui");
             cliente.duiC = Console.ReadLine();
             Console.Clear();
@@ -41,14 +49,13 @@ namespace GuiaDidactica02
             Console.Clear();
 
             //datos de empleado //
-
             Console.WriteLine("Escriba los datos de empleado : ");
             Console.WriteLine("Nombre: ");
-            empleado.nombreE = Console.ReadLine();
+            empleado.Nombre = Console.ReadLine();
             Console.WriteLine("Apellido: ");
-            empleado.apellidoE = Console.ReadLine();
+            empleado.Apellido = Console.ReadLine();
             Console.WriteLine("Telefono: ");
-            empleado.telefonoE = Convert.ToInt32(Console.ReadLine());
+            empleado.Telefono = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("ide");
             empleado.idE = Console.ReadLine();
             Console.Clear();
@@ -77,9 +84,9 @@ namespace GuiaDidactica02
 
     abstract class Persona
     {
-        public string nombre;
-        public string apellido;
-        public int telefono;
+        private string nombre;
+        private string apellido;
+        private int telefono;
 
         public string Nombre
         {
@@ -108,50 +115,23 @@ namespace GuiaDidactica02
         public void MostrarC()
         {
             Console.WriteLine("*** DATOS CLIENTE ***");
-            Console.WriteLine("Nombre: " + nombre +
-                              "\nApellido: " + apellido +
-                              "\nTelefono: " + telefono +
+            Console.WriteLine("Nombre: " + Nombre +
+                              "\nApellido: " + Apellido +
+                              "\nTelefono: " + Telefono +
                               "\nDui: " + duiC);
             Console.WriteLine("\n");
         }
 
     }
 
-    abstract class Emple
-    {
-        public string nombreE;
-        public string apellidoE;
-        public int telefonoE;
-
-        public string Nombre
-        {
-            get { return nombreE; }
-            set { nombreE = value; }
-        }
-
-        public string Apellido
-        {
-            get { return apellidoE; }
-            set { apellidoE = value; }
-        }
-
-        public int Telefono
-        {
-            get { return telefonoE; }
-            set { telefonoE = value; }
-        }
-
-
-    }
-
-    class Empleado : Emple
+    class Empleado : Persona
     {
         public string idE;
 
         public void DatosE()
         {
             Console.WriteLine("*** DATOS Empleado ***");
-            Console.WriteLine("Nombre: " + nombreE +  "\nApellido: " + apellidoE +  "\nTelefono: " + telefonoE + "\nidE: " + idE);
+            Console.WriteLine("Nombre: " + Nombre +  "\nApellido: " + Apellido +  "\nTelefono: " + Telefono + "\nidE: " + idE);
             Console.WriteLine("\n");
         }
     }
